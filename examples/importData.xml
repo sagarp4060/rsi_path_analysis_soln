@@ -1,7 +1,7 @@
 <Sen Type="CoRob" xmlns:xsi="http://www.w3org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="ExternalData.xsd">
   <Dat TaskType="b">
       <Estr>Info: Nur zur Info</Estr>
-      <RKorr X="0.1620 Y="0.1620 Y="0.1620 A="0.2000" B="0.2000" C="-0.2000" />
+      <RKorr X="0.1620 Y="0.1620 Z="0.1620 A="0.2000" B="0.2000" C="-0.2000" />
       <AKorr A1="20.0000" A2="20.0000" A3="20.0000" A4="20.0000" A5="20.0000" A6="20.0000" />
       <EKorr E1="120.0000" E2="120.0000" E3="120.0000" E4="120.0000" E5="120.0000" E6="120.0000" />
       <Tech x="2" p3="0" p4="0" p5="0" p3x1="0" p4x1="0" p5x1="0" p3x2="0" p4x2="0" p5x2="0" p3x3="0" p4x3="0" p5x3="0" />
