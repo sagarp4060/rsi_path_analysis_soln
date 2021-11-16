@@ -22,26 +22,37 @@ class RobotController {
         return new RobotController();
     }
     
-    manipulate(String A0, String A1, String A2, String A3, String A4, String A5) {
-        //native method call
-        rbt.manipulate(A0, A1, A2, A3, A4, A5);
-        //
+    manipulate(String A1, String A2, String A3, String A4, String A5, String A6, String m) {
+        //native method cal'
+        if (m.equals("PTP")) {
+            PTP A1;
+            PTP A2;
+            PTP A3;
+            PTP A4;
+            PTP A5;
+            PTP A6;
+        } else if (m.equals("LIN")) {
+            LIN A1;
+            LIN A2;
+            LIN A3;
+            LIN A4;
+            LIN A5;
+            LIN A6;
+        } else if (m.equals("CIRC")) {
+            CIRC A1;
+            CIRC A2;
+            CIRC A3;
+            CIRC A4;
+            CIRC A5;
+            CIRC A6;
+        } else {
+            System.out.println("Please enter correct value");
+        }
     }
     
     public String[] getUpdatedValues() {
         String[] s = {
-            rbt.getA0(),
-            rbt.getA1(),
-            rbt.getA2(),
-            rbt.getA3(),
-            rbt.getA4(),
-            rbt.getA5(),
-            rbt.getCurrA0(),
-            rbt.getCurrA1(),
-            rbt.getCurrA2(),
-            rbt.getCurrA3(),
-            rbt.getCurrA4(),
-            rbt.getCurrA5()
+            RET 
         }
         return s;
     }
