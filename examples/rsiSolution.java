@@ -3,13 +3,14 @@ class RsiSolution {
     public static void main(String[] args) {
         
         RobotController rbt = new RobotController.getInstance();
-        int A0, A1, A2, A3, A4, A5;
-        //provide new values for A0 to A5
+        float A0, A1, A2, A3, A4, A5;
+        //read values from 'importData.xml'
         
         RobotController rbt = new RobotController();
         rbt.manipulate(A0, A1, A2, A3, A4, A5);
-        
-        String[] values = rbt.getUpdatedValues();
+        String[] newValues = rbt.getUpdatedValues();
+        //write new values to 'exportData.xml'
+
         System.out.println(values);
     }
     
@@ -52,7 +53,30 @@ class RobotController {
     
     public String[] getUpdatedValues() {
         String[] s = {
-            RET 
+            //translational Corrections for rotational and translational axis
+            RET RKorrX;
+            RET RKorrY;
+            RET RKorrZ;
+            RET RKorrA;
+            RET RKorrB;
+            RET RKorrC;
+            
+            //axis specific corrections
+            RET RKorrA1;
+            RET RKorrA2;
+            RET RKorrA3;
+            RET RKorrA4;
+            RET RKorrA5;
+            RET RKorrA6;
+            
+            //EXTERNAL axis specific corrections
+            RET RKorrA7;
+            RET RKorrA8;
+            RET RKorrA9;
+            RET RKorrA10;
+            RET RKorrA11;
+            RET RKorrA12;
+            
         }
         return s;
     }
