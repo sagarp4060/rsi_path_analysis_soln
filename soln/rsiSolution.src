@@ -1,0 +1,77 @@
+&ACCESS RVP
+&REL 106
+&PARAM TEMPLATE = C:\KRC\Roboter\Template\vorgabe
+&PARAM EDITMASK = *
+DEFFCT DEF rsiSolution( )
+
+INI
+
+PTP HOME
+
+DECL DOUBLE A1;
+DECL DOUBLE A2;
+DECL DOUBLE A3;
+DECL DOUBLE A4;
+DECL DOUBLE A5;
+DECL DOUBLE A6;
+
+DECL RSIERR RET;
+
+%declare variables to get value from pc
+%translational Corrections for rotational and translational axis
+REAL RKorrX;
+REAL RKorrY;
+REAL RKorrZ;
+REAL RKorrA;
+REAL RKorrB;
+REAL RKorrC;
+
+%variables for axis specific corrections
+REAL RKorrA1;
+REAL RKorrA2;
+REAL RKorrA3;
+REAL RKorrA4;
+REAL RKorrA5;
+REAL RKorrA6;
+
+%variables for external axis specific corrections
+REAL RKorrX;
+REAL RKorrY;
+REAL RKorrZ;
+REAL RKorrA;
+REAL RKorrB;
+REAL RKorrC;
+
+//get values from importData.xml
+
+%if motion = linear
+IF (LIN) THEN
+  LIN A1;
+  LIN A2;
+  LIN A3;
+  LIN A4;
+  LIN A5;
+  LIN A6;
+ENDIF
+
+%if motion = PTP
+IF (PTP) THEN
+  PTP A1;
+  PTP A2;
+  PTP A3;
+  PTP A4;
+  PTP A5;
+  PTP A6;
+ENDIF
+
+%if motion = CIRC
+IF (CIRC) THEN
+  CIRC A1;
+  CIRC A2;
+  CIRC A3;
+  CIRC A4;
+  CIRC A5;
+  CIRC A6;
+ENDIF
+
+//write values to exportData.xml
